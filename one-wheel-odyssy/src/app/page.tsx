@@ -1,5 +1,7 @@
 import MaxWidthWrapper from "@/components/maxWidthWrapper";
-import Phone from "@/components/phone";
+import CascadingAvalanch from "@/components/cascadingAvalanch";
+// import Phone from "@/components/phone";
+// import { X } from 'lucide-react';
 import Image from "next/image";
 
 export default function Home() {
@@ -31,19 +33,19 @@ export default function Home() {
               </p>
               <ul className="mt-8 space-y-2 text-left font-medium flex flex-col items-center sm:items-start">
                 <div className="space-y-2">
-                  <div className="wherethexissuppozedtobe"></div>
+                  {/* <X /> */}
                   <li className="flex gap-1.5 items-center text-left">
                     Low-quality, cheap material
                   </li>
                 </div>
                 <div className="space-y-2">
-                  <div className="wherethexissuppozedtobe"></div>
+                  {/* <X /> */}
                   <li className="flex gap-1.5 items-center text-left">
                     4 year print nongarantee
                   </li>
                 </div>
                 <div className="space-y-2">
-                  <div className="wherethexissuppozedtobe"></div>
+                  {/* <X /> */}
                   <li className="flex gap-1.5 items-center text-left">
                     human legs not supported
                   </li>
@@ -91,163 +93,8 @@ export default function Home() {
           </div>
 
           <div className="col-span-full h-[1500px] lg:col-span-1 w-full hidden lg:flex items-start justify-around px-4 sm:px-16 md:px-0  lg:mx-0 l ">
-            {/* <div className="relative md:max-w-xl">
-              <img
-                src="/your-image.png"
-                alt=""
-                className="absolute w-49 lg:w-52 left-56 -top-20 select-none hidden sm:block lg:hidden xl:block"
-              />
-              <img
-                src="/line.png"
-                alt=""
-                className="absolute w-20 -left-6 -bottom-6 select-none"
-              />
-              <Phone className="w-64" imgSrc="/testimonials/1.jpg" />
-            </div> */}
-            {/* <div className="h-[1000px] w-1/2 flex items-center justify-around"> */}
-            <div className="absolute w-[400px] overflow-hidden wrapper flex justify-center  ">
-              {[...Array(3)].map((_, i) => (
-                <div
-                  style={{
-                    animationDelay: `calc(10s / 3 * (${3 - i} - 1) * -1)`,
-                  }}
-                  className="item"
-                  key={i}
-                >
-                  <img
-                    src="/testimonials/1.jpg"
-                    alt="Hero Image"
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-            <div className="absolute w-[400px] overflow-hidden wrapper  flex justify-center ">
-              {[...Array(3)].map((_, i) => (
-                <div
-                  style={{
-                    animationDelay: `calc(14s / 3 * (${3 - i} - 1) * -1)`,
-                  }}
-                  className="reverse-item"
-                  key={i}
-                >
-                  <img
-                    src="/testimonials/1.jpg"
-                    alt="Hero Image"
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-              ))}
-            </div>{" "}
+            <CascadingAvalanch />
           </div>
-          <style>{`
-        .marquee-container {
-          animation: marquee 12s linear infinite;
-        }
-
-        @keyframes marquee {
-         0% {
-             transform: translateY(-100%);
-           }
-           100% {
-             transform: translateY(100%);
-           }
-        }
-.wrapper {
-     height: 90%;
-    max-height: 700px;
-    margin-inline: auto;
-    position: relative;
-    overflow: hidden;
-  mask-image: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1) 20%,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(0, 0, 0, 0)
-  );
-}
-  
-.test {
-  background-color: green;
-
-}
-
-@keyframes scrollDown {
-  to {
-    Bottom: -200px;
-  }
-}
-
-@keyframes scrollUp {
-  to {
-    top: -200px;
-  }
-}
-.reverse-item {
-width: 250px;
-  height: 300px;
-  border-radius: 6px;
-  background-color: red;
-  position: absolute;
-  top: max(calc(300px * 3), 100%);
-  animation-name: scrollUp;
-  animation-duration: 14s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-  .item {
-  width: 250px;
-  height: 300px;
-  border-radius: 6px;
-  background-color: red;
-  position: absolute;
-  Bottom: max(calc(300px * 3), 100%);
-  animation-name: scrollDown;
-  animation-duration: 10s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-} 
-
-  @keyframes scrollDown {
-      to {
-        bottom: -300px;
-      }
-    }
-.item1 {
-  animation-delay: calc(30s / 8 * (8 - 1) * -1);
-}
-
-.item2 {
-  animation-delay: calc(30s / 8 * (8 - 2) * -1);
-}
-
-.item3 {
-  animation-delay: calc(30s / 8 * (8 - 3) * -1);
-}
-
-.item4 {
-  animation-delay: calc(30s / 8 * (8 - 4) * -1);
-}
-
-.item5 {
-  animation-delay: calc(30s / 8 * (8 - 5) * -1);
-}
-
-.item6 {
-  animation-delay: calc(30s / 8 * (8 - 6) * -1);
-}
-
-.item7 {
-  animation-delay: calc(30s / 8 * (8 - 7) * -1);
-}
-
-.item8 {
-  animation-delay: calc(30s / 8 * (8 - 8) * -1);
-}
-        
-      `}</style>
-          {/* </div> */}
         </MaxWidthWrapper>
       </section>
     </div>
