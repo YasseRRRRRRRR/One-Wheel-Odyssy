@@ -1,7 +1,7 @@
 import MaxWidthWrapper from "@/components/maxWidthWrapper";
 import CascadingAvalanch from "@/components/cascadingAvalanch";
 // import Phone from "@/components/phone";
-import { X, Star, Check } from "lucide-react";
+import { X, Star, Check, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { Icons } from "@/components/icon";
 import Reviews from "@/components/reviews";
@@ -48,18 +48,20 @@ export default function Home() {
                 <Link
                   href="/about"
                   className={buttonVariants({
+                    size: "lg",
                     variant: "outline",
                   })}
                 >
-                  About <span className="ml-1 5 size-5 ">{"->"}</span>
+                  About
                 </Link>
                 <Link
                   href="/configure/upload"
                   className={buttonVariants({
+                    size: "lg",
                     className: "hidden sm:flex items-center gap-1 ",
                   })}
                 >
-                  Get Started <span className="ml-1 5 size-5 ">{"->"}</span>
+                  Get Started <ArrowRight />
                 </Link>
               </div>
               <ul className="mt-8 space-y-2 text-left font-medium flex flex-col items-center sm:items-start">
@@ -111,7 +113,7 @@ export default function Home() {
                     <Star className="h-4 w-4 text-red-600 fill-red-600" />
                   </div>
                   <p>
-                    <span className="font-semibold">1.250</span> unhappy
+                    <span className="font-semibold">3.250</span> unhappy
                     customers
                   </p>
                 </div>

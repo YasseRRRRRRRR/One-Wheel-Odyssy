@@ -3,6 +3,7 @@ import MaxWidthWrapper from "./maxWidthWrapper";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import { ArrowRight } from "lucide-react";
 
 const NavBar = async () => {
   const { getUser } = getKindeServerSession();
@@ -46,7 +47,7 @@ const NavBar = async () => {
                     className: "hidden sm:flex items-center gap-1 ",
                   })}
                 >
-                  Get Started <span className="ml-1 5 size-5 ">{"->"}</span>
+                  Get Started <ArrowRight />
                 </Link>
               </>
             ) : (
@@ -78,7 +79,7 @@ const NavBar = async () => {
                     className: "hidden sm:flex items-center gap-1 ",
                   })}
                 >
-                  Get Started <span className="ml-1 5 size-5 ">{"->"}</span>
+                  Get Started <ArrowRight className="ml-1.5 h-5 w-5" />
                 </Link>
               </>
             )}
