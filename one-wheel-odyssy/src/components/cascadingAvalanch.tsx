@@ -1,133 +1,51 @@
+import React from "react";
+
 const CascadingAvalanch = () => {
-  const rand = Math.random();
+  const randomInt = (min: number, max: number): number =>
+    Math.floor(Math.random() * (max - min + 1)) + min;
+
+  // Original array of image indices
+  const originalImages = [1, 2, 3, 4, 5, 6];
+
+  // Shuffle the array
+  const shuffledImages = originalImages.sort(() => Math.random() - 0.5);
+
   return (
     <>
-      <div className="absolute w-[400px] overflow-hidden wrapper flex justify-center  ">
-        {[...Array(3)].map((_, i) => (
+      <div className="absolute w-[400px] overflow-hidden wrapper flex justify-center">
+        {shuffledImages.slice(0, 3).map((imageIndex, i) => (
           <div
             style={{
-              animationDelay: `calc(10s / 3 * (${3 - i} - 1) * -1)`,
+              animationDelay: `calc(15s / 3 * (${3 - i} - 1) * -1)`,
             }}
             className="item border-2 border-red-600 overflow-hidden"
             key={i}
           >
             <img
-              src={`/testimonials/${1 + i}.jpg`}
+              src={`/testimonials/${imageIndex}.jpg`}
               alt="Hero Image"
               className="h-full w-full object-cover"
             />
           </div>
         ))}
       </div>
-      <div className="absolute w-[400px] overflow-hidden wrapper  flex justify-center ">
-        {[...Array(3)].map((_, i) => (
+      <div className="absolute w-[400px] overflow-hidden wrapper hidden xl:flex justify-center">
+        {shuffledImages.slice(3).map((imageIndex, i) => (
           <div
             style={{
-              animationDelay: `calc(10s / 3 * (${3 - i} - 1) * -1)`,
+              animationDelay: `calc(15s / 3 * (${3 - i} - 1) * -1)`,
             }}
             className="reverse-item border-2 border-red-600 overflow-hidden"
             key={i}
           >
             <img
-              src={`/testimonials/${4 + i}.jpg`}
+              src={`/testimonials/${imageIndex}.jpg`}
               alt="Hero Image"
               className="h-full w-full object-cover"
             />
           </div>
         ))}
-      </div>{" "}
-      <style>{`
-      
-.wrapper {
-     height: 90%;
-    max-height: 700px;
-    margin-inline: auto;
-    position: relative;
-    overflow: hidden;
-  mask-image: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1) 20%,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(0, 0, 0, 0)
-  );
-}
-  
-.test {
-  background-color: green;
-
-}
-
-
-
-@keyframes scrollUp {
-  to {
-    top: -350px;
-  }
-  }
-  @keyframes scrollDown {
-      to {
-        bottom: -350px;
-      }
-    }
-.reverse-item {
-width: 250px;
-  height: 400px;
-  border-radius: 6px;
-  background-color: red;
-  position: absolute;
-  top: max(calc(400px * 3), 100%);
-  animation-name: scrollUp;
-  animation-duration: 10s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-  .item {
-  width: 250px;
-  height: 400px;
-  border-radius: 6px;
-  background-color: red;
-  position: absolute;
-  Bottom: max(calc(400px * 3), 100%);
-  animation-name: scrollDown;
-  animation-duration: 10s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-} 
-
-.item1 {
-  animation-delay: calc(30s / 8 * (8 - 1) * -1);
-}
-
-.item2 {
-  animation-delay: calc(30s / 8 * (8 - 2) * -1);
-}
-
-.item3 {
-  animation-delay: calc(30s / 8 * (8 - 3) * -1);
-}
-
-.item4 {
-  animation-delay: calc(30s / 8 * (8 - 4) * -1);
-}
-
-.item5 {
-  animation-delay: calc(30s / 8 * (8 - 5) * -1);
-}
-
-.item6 {
-  animation-delay: calc(30s / 8 * (8 - 6) * -1);
-}
-
-.item7 {
-  animation-delay: calc(30s / 8 * (8 - 7) * -1);
-}
-
-.item8 {
-  animation-delay: calc(30s / 8 * (8 - 8) * -1);
-}
-        
-      `}</style>
+      </div>
     </>
   );
 };

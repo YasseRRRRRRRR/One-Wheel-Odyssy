@@ -5,6 +5,8 @@ import { X, Star, Check } from "lucide-react";
 import Image from "next/image";
 import { Icons } from "@/components/icon";
 import Reviews from "@/components/reviews";
+import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -16,9 +18,9 @@ export default function Home() {
               <div className="absolute w-28 left-0 -top-20 hidden lg:block">
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t via-slate-50/50 from-slate-50 h-28" />
                 <Image
-                  width={70}
-                  height={70}
-                  src="/snake-1.png"
+                  width={200}
+                  height={200}
+                  src="/cat.jpg"
                   alt="LOGo thingy I need to change"
                 />
               </div>
@@ -28,18 +30,38 @@ export default function Home() {
                 on one wheel
               </h1>
               <p className="mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
-                Welcome to One-Wheel Odyssey, where unicycling becomes an
-                unforgettable journey. Whether you&apos;re a beginner or an
-                experienced rider, our{" "}
-                <span className="font-semibold">wide</span> range of unicycles
-                and accessories will take your skills to new heights.
-                {/* Capture your worst
-                nightmares with your own money{" "}
-                bitch One-Wheel-Odyssy is
-                not only a useless one time purchase that you probably
-                won&apos;t ever use, it will also make you look like a complete
-                nonce, I mean who the fuck buys unicycles anymore */}
+                Have you ever looked to yourself and thought <br />
+                <span className="italic font-semibold">
+                  --Huh, you know what would really make me feel really good
+                  right now a unicycle--
+                </span>{" "}
+                <br />
+                No, well that doesn&apos;t matter, here in one-wheel-odyssy
+                <span>&trade;</span> we believe in overconsumption, and letting
+                your darkest impulses be indulged
               </p>
+              <span className="mt-6 text-base">
+                Yes, You simply need it, and must have, go on let us rest on
+                your shelf and collect dust.
+              </span>
+              <div className="mt-8 flex justify-center lg:justify-end gap-2">
+                <Link
+                  href="/about"
+                  className={buttonVariants({
+                    variant: "outline",
+                  })}
+                >
+                  About <span className="ml-1 5 size-5 ">{"->"}</span>
+                </Link>
+                <Link
+                  href="/configure/upload"
+                  className={buttonVariants({
+                    className: "hidden sm:flex items-center gap-1 ",
+                  })}
+                >
+                  Get Started <span className="ml-1 5 size-5 ">{"->"}</span>
+                </Link>
+              </div>
               <ul className="mt-8 space-y-2 text-left font-medium flex flex-col items-center sm:items-start">
                 <div className="space-y-2">
                   <li className="flex gap-1.5 items-center text-left">
@@ -115,10 +137,12 @@ export default function Home() {
               </span>{" "}
               said
             </h2>
-            <img
-              src="/snake-2.png"
+            <Image
+              width={200}
+              height={200}
+              src="/circus.png"
               alt="icon to be changed"
-              className="w-24 order-0 lg:order-2"
+              className="order-0 lg:order-2"
             />
           </div>
 
@@ -145,7 +169,7 @@ export default function Home() {
               </div>
               <div className="flex gap-4 mt-2">
                 <img
-                  src="testimonials/1.jpg"
+                  src="/users/user-3.jpg"
                   alt="unhappy customer's face, now much larger with a rounded edges"
                   className="rounded-full h-12 w-12 object-cover"
                 />
@@ -174,7 +198,7 @@ export default function Home() {
                   <span className="p-0.5 bg-slate-800 text-white">
                     how did you even get here
                   </span>{" "}
-                  , what&apos;s your afiliation are you with them &quot;
+                  ,what&apos;s your afiliation&quot;
                 </p>
               </div>
               <div className="flex gap-4 mt-2">
@@ -222,10 +246,7 @@ export default function Home() {
                   <p className="font-semibold">Joshua</p>
                   <div className="flex gap-1.5 items-center text-zinc-600">
                     <Check className="size-4 stroke-[3px] text-red-600" />
-                    <p className="text-sm">
-                      I feel like I&apos;ve seen this face in another template
-                      Project
-                    </p>
+                    <p className="text-sm">Unverified Purchase</p>
                   </div>
                 </div>
               </div>
