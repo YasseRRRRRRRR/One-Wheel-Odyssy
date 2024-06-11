@@ -46,7 +46,7 @@ const NavBar = async () => {
                     className: "hidden sm:flex items-center gap-1 ",
                   })}
                 >
-                  Buy/Rent <span className="ml-1 5 size-5 ">{"->"}</span>
+                  Get Started <span className="ml-1 5 size-5 ">{"->"}</span>
                 </Link>
               </>
             ) : (
@@ -78,7 +78,7 @@ const NavBar = async () => {
                     className: "hidden sm:flex items-center gap-1 ",
                   })}
                 >
-                  Buy/Rent <span className="ml-1 5 size-5 ">{"->"}</span>
+                  Get Started <span className="ml-1 5 size-5 ">{"->"}</span>
                 </Link>
               </>
             )}

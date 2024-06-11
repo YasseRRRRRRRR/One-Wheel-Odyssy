@@ -14,6 +14,7 @@ export default function Home() {
           <div className="col-span-1 p-6 lg:px-0 lg:pt-4">
             <div className="relative mx-auto text-center lg:text-left flex flex-col items-center lg:items-start">
               <div className="absolute w-28 left-0 -top-20 hidden lg:block">
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t via-slate-50/50 from-slate-50 h-28" />
                 <Image
                   width={70}
                   height={70}
@@ -21,17 +22,23 @@ export default function Home() {
                   alt="LOGo thingy I need to change"
                 />
               </div>
-              <h1 className="relative w-fit tracking-tight text-balance mt-16 font-bold !leading-tight text-gray-900 text-5xl md:text-6xl lg:text-7xl">
-                Your image on a{" "}
-                <span className="bg-red-600 px-2 text-white">Custom</span> Phone
-                Case
+              <h1 className="relative w-fit tracking-tight text-balance mt-16 font-bold !leading-tight text-gray-900 text-5xl md:text-6xl lg:text-6xl">
+                Unleash your inner{" "}
+                <span className="bg-red-600 px-2 text-white">adventurer</span>{" "}
+                on one wheel
               </h1>
               <p className="mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
-                Capture your worst nightmares with your own money{" "}
-                <span className="font-semibold">bitch</span> One-Wheel-Odyssy is
+                Welcome to One-Wheel Odyssey, where unicycling becomes an
+                unforgettable journey. Whether you&apos;re a beginner or an
+                experienced rider, our{" "}
+                <span className="font-semibold">wide</span> range of unicycles
+                and accessories will take your skills to new heights.
+                {/* Capture your worst
+                nightmares with your own money{" "}
+                bitch One-Wheel-Odyssy is
                 not only a useless one time purchase that you probably
                 won&apos;t ever use, it will also make you look like a complete
-                nonce, I mean who the fuck buys unicycles anymore
+                nonce, I mean who the fuck buys unicycles anymore */}
               </p>
               <ul className="mt-8 space-y-2 text-left font-medium flex flex-col items-center sm:items-start">
                 <div className="space-y-2">
@@ -53,24 +60,24 @@ export default function Home() {
               <div className="mt-12 flex flex-col sm:flex-row items-center sm:items-start gap-5 ">
                 <div className="flex -space-x-4">
                   <img
-                    src="/users/user-5.jpg"
+                    src="/users/user-1.png"
+                    alt="unhappy customer's face"
+                    className="inline-block object-cover object-cover h-10 w-10 rounded-full ring-2 ring-slate-100"
+                  />
+                  <img
+                    src="/users/user-3.jpg"
                     alt="unhappy customer's face"
                     className="inline-block object-cover h-10 w-10 rounded-full ring-2 ring-slate-100"
                   />
                   <img
-                    src="/users/user-1.png"
+                    src="/users/user-2.jpg"
                     alt="unhappy customer's face"
-                    className="inline-block h-10 w-10 rounded-full ring-2 ring-slate-100"
+                    className="inline-block object-cover object-cover h-10 w-10 rounded-full ring-2 ring-slate-100"
                   />
                   <img
-                    src="/users/user-5.jpg"
+                    src="/users/user-4.jpg"
                     alt="unhappy customer's face"
                     className="inline-block object-cover h-10 w-10 rounded-full ring-2 ring-slate-100"
-                  />
-                  <img
-                    src="/users/user-1.png"
-                    alt="unhappy customer's face"
-                    className="inline-block h-10 w-10 rounded-full ring-2 ring-slate-100"
                   />
                 </div>
                 <div className="flex flex-col justify-between items-center sm:items-start ">
@@ -138,7 +145,7 @@ export default function Home() {
               </div>
               <div className="flex gap-4 mt-2">
                 <img
-                  src="/users/user-1.png"
+                  src="testimonials/1.jpg"
                   alt="unhappy customer's face, now much larger with a rounded edges"
                   className="rounded-full h-12 w-12 object-cover"
                 />
@@ -172,17 +179,15 @@ export default function Home() {
               </div>
               <div className="flex gap-4 mt-2">
                 <img
-                  src="/users/user-5.jpg"
+                  src="/users/user-2.jpg"
                   alt="unhappy customer's face, now much larger with a rounded edges"
                   className="rounded-full h-12 w-12 object-cover"
                 />
                 <div className="flex flex-col">
-                  <p className="font-semibold">Samantha</p>
+                  <p className="font-semibold">lillith</p>
                   <div className="flex gap-1.5 items-center text-zinc-600">
                     <Check className="size-4 stroke-[3px] text-red-600" />
-                    <p className="text-sm">
-                      Ruler of the underworld and acrobatics enthusiast
-                    </p>
+                    <p className="text-sm">Prefers the name Lilly</p>
                   </div>
                 </div>
               </div>
@@ -209,7 +214,7 @@ export default function Home() {
               </div>
               <div className="flex gap-4 mt-2">
                 <img
-                  src="/users/user-5.jpg"
+                  src="/users/user-1.png"
                   alt="unhappy customer's face, now much larger with a rounded edges"
                   className="rounded-full h-12 w-12 object-cover"
                 />
@@ -217,7 +222,10 @@ export default function Home() {
                   <p className="font-semibold">Joshua</p>
                   <div className="flex gap-1.5 items-center text-zinc-600">
                     <Check className="size-4 stroke-[3px] text-red-600" />
-                    <p className="text-sm">Unverified Purchase</p>
+                    <p className="text-sm">
+                      I feel like I&apos;ve seen this face in another template
+                      Project
+                    </p>
                   </div>
                 </div>
               </div>

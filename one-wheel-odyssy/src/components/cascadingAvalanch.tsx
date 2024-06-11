@@ -1,4 +1,5 @@
 const CascadingAvalanch = () => {
+  const rand = Math.random();
   return (
     <>
       <div className="absolute w-[400px] overflow-hidden wrapper flex justify-center  ">
@@ -7,11 +8,11 @@ const CascadingAvalanch = () => {
             style={{
               animationDelay: `calc(10s / 3 * (${3 - i} - 1) * -1)`,
             }}
-            className="item border-2 border-red-600"
+            className="item border-2 border-red-600 overflow-hidden"
             key={i}
           >
             <img
-              src="/testimonials/1.jpg"
+              src={`/testimonials/${1 + i}.jpg`}
               alt="Hero Image"
               className="h-full w-full object-cover"
             />
@@ -24,11 +25,11 @@ const CascadingAvalanch = () => {
             style={{
               animationDelay: `calc(10s / 3 * (${3 - i} - 1) * -1)`,
             }}
-            className="reverse-item border-2 border-red-600"
+            className="reverse-item border-2 border-red-600 overflow-hidden"
             key={i}
           >
             <img
-              src="/testimonials/1.jpg"
+              src={`/testimonials/${4 + i}.jpg`}
               alt="Hero Image"
               className="h-full w-full object-cover"
             />
