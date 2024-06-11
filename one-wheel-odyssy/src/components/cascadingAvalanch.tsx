@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const CascadingAvalanch = () => {
@@ -21,10 +22,12 @@ const CascadingAvalanch = () => {
             className="item border-2 border-red-600 overflow-hidden"
             key={i}
           >
-            <img
+            <Image
+              width={300}
+              height={400}
               src={`/testimonials/${imageIndex}.jpg`}
-              alt="Hero Image"
-              className="h-full w-full object-cover"
+              alt="Satisfied Customers"
+              className="size-full object-cover"
             />
           </div>
         ))}
@@ -38,10 +41,12 @@ const CascadingAvalanch = () => {
             className="reverse-item border-2 border-red-600 overflow-hidden"
             key={i}
           >
-            <img
+            <Image
+              width={300}
+              height={400}
               src={`/testimonials/${imageIndex}.jpg`}
-              alt="Hero Image"
-              className="h-full w-full object-cover"
+              alt="Satisfied Customers"
+              className="size-full object-cover"
             />
           </div>
         ))}

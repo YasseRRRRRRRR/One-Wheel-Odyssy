@@ -1,0 +1,4 @@
++ max width wrapper.
++ flex -space-x-4 (for the avatars that are slightly on top of each other looks lovely)
++ space in tailwind looks better then making padding by hand
++ footer I mean at this point just take it everytime from there

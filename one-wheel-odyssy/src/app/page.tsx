@@ -21,7 +21,7 @@ export default function Home() {
                   width={200}
                   height={200}
                   src="/cat.jpg"
-                  alt="LOGo thingy I need to change"
+                  alt="the cutest illustration of cat on a unicycle afore a red background"
                 />
               </div>
               <h1 className="relative w-fit tracking-tight text-balance mt-16 font-bold !leading-tight text-gray-900 text-5xl md:text-6xl lg:text-6xl">
@@ -33,7 +33,7 @@ export default function Home() {
                 Have you ever looked to yourself and thought <br />
                 <span className="italic font-semibold">
                   --Huh, you know what would really make me feel really good
-                  right now a unicycle--
+                  right now... a unicycle--
                 </span>{" "}
                 <br />
                 No, well that doesn&apos;t matter, here in one-wheel-odyssy
@@ -41,14 +41,14 @@ export default function Home() {
                 your darkest impulses be indulged
               </p>
               <span className="mt-6 text-base">
-                Yes, You simply need it, and must have, go on let us rest on
+                Yes, You simply need it, and must have, go on, let us rest on
                 your shelf and collect dust.
               </span>
-              <div className="mt-8 flex justify-center lg:justify-end gap-2">
+              <div className="mt-8 flex justify-center gap-2">
                 <Link
                   href="/about"
                   className={buttonVariants({
-                    size: "lg",
+                    // size: "lg",
                     variant: "outline",
                   })}
                 >
@@ -58,7 +58,7 @@ export default function Home() {
                   href="/configure/upload"
                   className={buttonVariants({
                     size: "lg",
-                    className: "hidden sm:flex items-center gap-1 ",
+                    // className: "sm:flex items-center gap-1 ",
                   })}
                 >
                   Get Started <ArrowRight />
@@ -143,7 +143,7 @@ export default function Home() {
               width={200}
               height={200}
               src="/circus.png"
-              alt="icon to be changed"
+              alt="illustration of a man jugglinf while on unicycle afore a red background, very on theme if I do say so myself"
               className="order-0 lg:order-2"
             />
           </div>
@@ -198,9 +198,9 @@ export default function Home() {
                   &quot;What, What are you talking about, I would never make
                   such a frivoulous purchase, w.what, who even are you{" "}
                   <span className="p-0.5 bg-slate-800 text-white">
-                    how did you even get here
+                    how did you even get here,
                   </span>{" "}
-                  ,what&apos;s your afiliation&quot;
+                  what are you doing in my house&quot;
                 </p>
               </div>
               <div className="flex gap-4 mt-2">
