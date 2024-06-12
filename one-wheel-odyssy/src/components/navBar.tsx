@@ -47,7 +47,7 @@ const NavBar = async () => {
                     className: "hidden sm:flex items-center gap-1 ",
                   })}
                 >
-                  Get Started <ArrowRight />
+                  Get Started <ArrowRight className="ml-1.5 h-5 w-5" />
                 </Link>
               </>
             ) : (
@@ -63,13 +63,13 @@ const NavBar = async () => {
                 </Link>
 
                 <Link
-                  href="/api/auth/register"
+                  href="/api/auth/login"
                   className={buttonVariants({
                     size: "sm",
                     variant: "ghost",
                   })}
                 >
-                  Login
+                  Log in
                 </Link>
                 <div className="h-8 w-px bg-zinc-200 hidden sm:block"></div>
                 <Link

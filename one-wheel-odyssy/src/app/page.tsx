@@ -37,8 +37,8 @@ export default function Home() {
                 </span>{" "}
                 <br />
                 No, well that doesn&apos;t matter, here in one-wheel-odyssy
-                <span>&trade;</span> we believe in overconsumption, and letting
-                your darkest impulses be indulged
+                <span>&trade;</span> we believe in overconsumption, and
+                indulging your darkest impulses.
               </p>
               <span className="mt-6 text-base">
                 Yes, You simply need it, and must have, go on, let us rest on
@@ -48,7 +48,7 @@ export default function Home() {
                 <Link
                   href="/about"
                   className={buttonVariants({
-                    // size: "lg",
+                    size: "lg",
                     variant: "outline",
                   })}
                 >
@@ -58,10 +58,11 @@ export default function Home() {
                   href="/configure/upload"
                   className={buttonVariants({
                     size: "lg",
-                    // className: "sm:flex items-center gap-1 ",
                   })}
                 >
-                  Get Started <ArrowRight />
+                  Get Started
+                  {/* not sure if i should leave it or take it away */}
+                  {/* <ArrowRight />  */}
                 </Link>
               </div>
               <ul className="mt-8 space-y-2 text-left font-medium flex flex-col items-center sm:items-start">
@@ -143,8 +144,8 @@ export default function Home() {
               width={200}
               height={200}
               src="/circus.png"
-              alt="illustration of a man jugglinf while on unicycle afore a red background, very on theme if I do say so myself"
-              className="order-0 lg:order-2"
+              alt="illustration of a man juggling somesort of bowling pins while on unicycle afore a red background, very on theme if I do say so myself"
+              className="order-0 lg:order-2 h-auto"
             />
           </div>
 
