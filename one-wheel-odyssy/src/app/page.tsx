@@ -1,6 +1,5 @@
 import MaxWidthWrapper from "@/components/maxWidthWrapper";
 import CascadingAvalanch from "@/components/cascadingAvalanch";
-// import Phone from "@/components/phone";
 import { X, Star, Check, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { Icons } from "@/components/icon";
@@ -257,6 +256,7 @@ export default function Home() {
           </div>
         </MaxWidthWrapper>
       </section>
+      {/* not reviews just some products gotta change that component name ASAP */}
       <section className="bg-slate-100 py-24">
         <Reviews />
       </section>
