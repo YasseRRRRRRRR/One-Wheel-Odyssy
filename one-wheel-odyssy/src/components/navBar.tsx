@@ -15,8 +15,34 @@ const NavBar = async () => {
       <MaxWidthWrapper>
         <div className="flex h-14 items-center justify-between border-b border-zinc-200">
           <Link href="/" className="flex z-40 font-semibold">
-            one-<span className="text-red-600">Wheel</span>-odyssy
+            <p>
+              one-<span className="text-red-600">Wheel</span>-odyssy
+            </p>
           </Link>
+          {/* <div className="ml-14 flex gap-1 text-sm items-center">
+              <div className="sr-only">placeholder translation</div>
+              <Link
+                href="/en"
+                passHref
+                className=" hover:bg-red-600 hover:text-white font-bold py-1 px-3 rounded"
+              >
+                EN
+              </Link>
+              <Link
+                href="/fi"
+                passHref
+                className=" hover:bg-red-600 hover:text-white font-bold py-1 px-3 rounded "
+              >
+                FI
+              </Link>
+              <Link
+                href="/sv"
+                passHref
+                className=" hover:bg-red-600 hover:text-white font-bold py-1 px-3 rounded "
+              >
+                SV
+              </Link>
+            </div> */}
           <div className="h-full flex items-center space-x-4">
             {user ? (
               <>
@@ -37,7 +63,7 @@ const NavBar = async () => {
                       variant: "ghost",
                     })}
                   >
-                    Dashboard [sparckles]
+                    Dashboard
                   </Link>
                 ) : null}
                 <Link

@@ -72,8 +72,8 @@ export default function Home() {
                     Low-quality, cheap material
                   </li>
                   <li className="flex gap-1.5 items-center text-left">
-                    <X className="h-5 w-5 shrink-0 text-red-600" />4 year print
-                    nongarantee
+                    <X className="h-5 w-5 shrink-0 text-red-600" />4 year
+                    garantee (maybe)
                   </li>
                   <li className="flex gap-1.5 items-center text-left">
                     <X className="h-5 w-5 shrink-0 text-red-600" />
