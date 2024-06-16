@@ -14,7 +14,7 @@ const Page = () => {
     >
       <div className="relative flex flex-1 flex-col items-center justify-center w-full">
         <div className="h-full w-full flex-1 flex flex-col items-center justify-center">
-          {/* I guess here would be the quiz */}
+          {/* I guess here would be the quiz but first we'll just have a normal ecommerce thingy*/}
           <input type="text" />
         </div>
       </div>

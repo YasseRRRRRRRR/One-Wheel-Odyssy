@@ -35,6 +35,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+
 const NavBar = async () => {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
@@ -64,7 +65,6 @@ const NavBar = async () => {
                     />
                   </div>
                 </form>
-
                 {/* Language */}
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
@@ -84,7 +84,6 @@ const NavBar = async () => {
                     <DropdownMenuItem>SV</DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
-
                 {/* Profile */}
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
@@ -113,9 +112,8 @@ const NavBar = async () => {
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
-
-                {/* cart */}
-                {/* on larger devices it's a popover */}
+                {/* Shopping Cart */}
+                {/* on larger devices it's a popover */}{" "}
                 <div className="hidden lg:block ">
                   <Popover>
                     <PopoverTrigger asChild>
@@ -201,7 +199,6 @@ const NavBar = async () => {
                     </PopoverContent>
                   </Popover>
                 </div>
-
                 {/* on mobile it is a slidover */}
                 <div className="block lg:hidden">
                   <Sheet>
@@ -265,6 +262,7 @@ const NavBar = async () => {
               </>
             ) : (
               <>
+                {/* Register */}
                 <Link
                   href="/api/auth/register"
                   className={buttonVariants({
@@ -275,6 +273,7 @@ const NavBar = async () => {
                   Sign in
                 </Link>
 
+                {/* Login  */}
                 <Link
                   href="/api/auth/login"
                   className={buttonVariants({
