@@ -49,14 +49,14 @@ const Reviews = () => {
                         objectFit="cover"
                         src="/unpaid-models-pleaseforgiveme/psychopath1.jpg"
                         alt="picture of a person enjoying the product"
-                        className="absolute inset-0 h-full w-full object-cover opacity-100 transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+                        className="absolute inset-0 h-full w-full object-cover opacity-100 transition-opacity duration-300 ease-in-out group-hover:opacity-0 border-2 border-red-600"
                       />
                       <Image
                         layout="fill"
                         objectFit="cover"
                         src="/product-list/for-the-sociopaths.jpg"
                         alt="a better picture of the product itself"
-                        className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+                        className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 border-2 border-red-600"
                       />
                     </div>
 
@@ -78,14 +78,14 @@ const Reviews = () => {
                         objectFit="cover"
                         src="/unpaid-models-pleaseforgiveme/electrical-person.jpg"
                         alt="picture of a person enjoying the product"
-                        className="absolute inset-0 h-full w-full object-cover opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0"
+                        className="absolute inset-0 h-full w-full object-cover opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 border-2 border-red-600"
                       />
                       <Image
                         layout="fill"
                         objectFit="cover"
                         src="/product-list/electrical-unicyle.jpg"
                         alt="a better picture of the product itself"
-                        className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100"
+                        className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 border-2 border-red-600"
                       />
                     </div>
 
@@ -125,13 +125,22 @@ const Reviews = () => {
                   </p>
                 </header>
                 <div className="mt-8 hidden lg:inline-block">
+                  {/* <Link
+                    href="/about"
+                    className={buttonVariants({
+                      size: "sm",
+                      variant: "outline",
+                    })}
+                  >
+                    About
+                  </Link> */}
                   <Link
-                    href="/configure/upload"
+                    href="/configure/collections"
                     className={buttonVariants({
                       size: "lg",
                     })}
                   >
-                    Get your own unicycle
+                    Shop Unicycles
                     <ArrowRight className="ml-1.5 h-5 w-5" />
                   </Link>
                 </div>
@@ -148,14 +157,14 @@ const Reviews = () => {
                         objectFit="cover"
                         src="/unpaid-models-pleaseforgiveme/vintage-professionals.jpg"
                         alt="picture of a person enjoying the product"
-                        className="absolute inset-0 h-full w-full object-cover opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0"
+                        className="absolute inset-0 h-full w-full object-cover opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 border-2 border-red-600"
                       />
                       <Image
                         layout="fill"
                         objectFit="cover"
                         src="/product-list/larger-tire-model.jpg"
                         alt="a better picture of the product itself"
-                        className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100"
+                        className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 border-2 border-red-600"
                       />
                     </div>
 
@@ -177,14 +186,14 @@ const Reviews = () => {
                         objectFit="cover"
                         src="/unpaid-models-pleaseforgiveme/weirdly-shaped-unicycle.jpg"
                         alt="picture of a person enjoying the product"
-                        className="absolute inset-0 h-full w-full object-cover opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0"
+                        className="absolute inset-0 h-full w-full object-cover opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 border-2 border-red-600"
                       />
                       <Image
                         layout="fill"
                         objectFit="cover"
                         src="/product-list/longer-pedals-model.jpg"
                         alt="a better picture of the product itself"
-                        className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100"
+                        className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 border-2 border-red-600"
                       />
                     </div>
 

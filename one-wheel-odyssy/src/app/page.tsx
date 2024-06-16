@@ -45,16 +45,7 @@ export default function Home() {
               </span>
               <div className="mt-8 flex justify-center gap-2">
                 <Link
-                  href="/about"
-                  className={buttonVariants({
-                    size: "lg",
-                    variant: "outline",
-                  })}
-                >
-                  About
-                </Link>
-                <Link
-                  href="/configure/upload"
+                  href="/configure/collections"
                   className={buttonVariants({
                     size: "lg",
                   })}
