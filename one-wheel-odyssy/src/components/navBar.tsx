@@ -101,7 +101,7 @@ const NavBar = async () => {
                     <DropdownMenuSeparator />
                     {isAdmin ? (
                       <DropdownMenuItem>
-                        <Link href="/api/auth/logout">Dashboard</Link>
+                        <Link href="/admin/dashboard">Dashboard</Link>
                       </DropdownMenuItem>
                     ) : null}
                     <DropdownMenuItem>Settings</DropdownMenuItem>

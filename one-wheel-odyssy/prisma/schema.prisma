@@ -1,0 +1,79 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Unicycle {
+  id           String      @id @default(uuid())
+  name         String
+  description  String
+  color        String
+  size         String
+  priceInCents Int
+  stock        Int
+  imagePath    String
+  Category     Category    @relation(fields: [categoryId], references: [id])
+  categoryId   String
+  createdAt    DateTime    @default(now())
+  UpdatedAt    DateTime    @updatedAt
+  OrderItem    OrderItem[]
+
+  @@map("unicycles")
+}
+
+model Category {
+  id        String     @id @default(uuid())
+  name      String
+  unicycles Unicycle[]
+
+  @@map("categories")
+}
+
+model Customer {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  priceInCents Int
+  createdAt    DateTime @default(now())
+  UpdatedAt    DateTime @updatedAt
+  firstName    String?
+  lastName     String?
+  address      String?
+  phone        String?
+  orders       Order[]
+
+  @@map("customers")
+}
+
+model Order {
+  id          String    @id @default(uuid())
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  totalAmount Float
+  status      String    @default("PENDING") // Possible values: PENDING, SHIPPED, DELIVERED, CANCELLED
+  Customer    Customer? @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  customerId  String?
+
+  items OrderItem[]
+
+  @@map("orders")
+}
+
+model OrderItem {
+  id         String   @id @default(uuid())
+  quantity   Int
+  price      Float
+  Unicycle   Unicycle @relation(fields: [unicycleId], references: [id], onDelete: Restrict)
+  unicycleId String
+
+  Order   Order  @relation(fields: [orderId], references: [id])
+  orderId String
+
+  @@map("order_items")
+}

@@ -3,8 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/navBar";
 import Footer from "@/components/footer";
+import { cn } from "@/lib/utils";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: "One Wheel Odyssy",
@@ -18,7 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body
+        className={cn(
+          "bg-background min-h-screen font-sans antialiased",
+          inter.variable
+        )}
+      >
         <NavBar />
         <main className="flex flex-col min-h-[calc(100vh-3.5rem-1px)]">
           <div className="flex-1 flex flex-col h-full">{children}</div>
