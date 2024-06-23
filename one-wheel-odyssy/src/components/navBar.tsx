@@ -47,7 +47,7 @@ const NavBar = async () => {
         <div className="flex h-14 items-center justify-between border-b border-zinc-200">
           <Link href="/" className="flex z-40 font-semibold">
             <p>
-              one-<span className="text-red-600">Wheel</span>-odyssy
+              One-<span className="text-red-600">Wheel</span>-Odyssy
             </p>
           </Link>
 

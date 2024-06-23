@@ -33,15 +33,34 @@ const getUserData = async () => {
       userCount === 0 ? 0 : (orderData._sum.totalAmount || 0) / userCount / 100,
   };
 };
+const getUnicycleData = async () => {
+  const [totalStockResult, TypesOfAvailableUnicyles] = await Promise.all([
+    db.unicycle.aggregate({
+      _sum: { stock: true },
+    }),
+    db.unicycle.count(),
+  ]);
+  const TotalStock = totalStockResult._sum.stock;
+  return {
+    TotalStock,
+    TypesOfAvailableUnicyles,
+  };
+};
+
+// for loader testing
+const wait = (duration: number) => {
+  return new Promise((resolve) => setTimeout(resolve, duration));
+};
+
 const Page = async () => {
-  const [salesData, userData] = await Promise.all([
+  const [salesData, userData, unicycleData] = await Promise.all([
     getSalesData(),
     getUserData(),
+    getUnicycleData(),
   ]);
-  // const salesData = await getSalesData();
-  // const userData = await getUserData();
+
   return (
-    <div className="my-16 grid grid-cols-1 md:grid-cols-2 lg:grid-col-3 gap-4">
+    <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-col-3 gap-4">
       <DashboardCard
         title="Sales"
         subtitle={`${formatNumber(salesData.numberOfSales)} orders`}
@@ -55,13 +74,14 @@ const Page = async () => {
         body={formatNumber(userData.userCount)}
       />
       <DashboardCard
-        title="Sales"
-        subtitle={`${formatNumber(salesData.numberOfSales)} orders`}
-        body={formatCurrency(salesData.amount)}
+        title="Active Unicycles"
+        subtitle={`${formatNumber(
+          unicycleData.TypesOfAvailableUnicyles
+        )} In Stock`}
+        body={`${formatNumber(
+          unicycleData.TotalStock || 0
+        )} Types Of Unicycles`}
       />
-
-      {/* <DashboardCard title="Cusotmer" subtitle="Test" body="body" />
-      <DashboardCard title="Sales" subtitle="Test" body="body" /> */}
     </div>
   );
 };
