@@ -122,7 +122,7 @@ const NavBar = async () => {
                         <span className="sr-only">Toggle ShoppingCart</span>
                       </Button>
                     </PopoverTrigger>
-                    <PopoverContent className="w-screen max-w-sm  z-[101] border border-red-600   py-8 px-8">
+                    <PopoverContent className="w-screen max-w-sm  z-[101] hidden lg:block border border-red-600   py-8 px-8">
                       {/* <button className="absolute end-4 top-4 text-gray-600 transition hover:scale-110">
                           <span className="sr-only">Close cart</span>
 
@@ -212,7 +212,7 @@ const NavBar = async () => {
                         <span className="sr-only">Toggle ShoppingCart</span>
                       </Button>
                     </SheetTrigger>
-                    <SheetContent className="z-[101]">
+                    <SheetContent className="z-[101] block lg:hidden">
                       <SheetHeader>
                         <SheetTitle>Shopping cart</SheetTitle>
                       </SheetHeader>

@@ -18,8 +18,6 @@ const Reviews = () => {
   return (
     <div>
       <MaxWidthWrapper className="flex flex-col items-center justify-center">
-        {/* <p>[section n. 03]</p>
-        <p>something about the quiz then the call to action</p> */}
         <motion.div
           ref={firstContainerRef}
           initial={{ opacity: 0 }}
