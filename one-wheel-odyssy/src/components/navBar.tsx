@@ -35,6 +35,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import TranslationDropDown from "./translationDropDwon";
 
 const NavBar = async () => {
   const { getUser } = getKindeServerSession();
@@ -66,24 +67,7 @@ const NavBar = async () => {
                   </div>
                 </form>
                 {/* Language */}
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button
-                      variant="secondary"
-                      size="icon"
-                      // className="hidden sm:flex "
-                    >
-                      FI
-                      {/* <ChevronDown className="ml-1.5 h-4 w-4" /> */}
-                      <span className="sr-only">Toggle Language menu</span>
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="center" className="z-[101]">
-                    <DropdownMenuItem>FI</DropdownMenuItem>
-                    <DropdownMenuItem>EN</DropdownMenuItem>
-                    <DropdownMenuItem>SV</DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
+                <TranslationDropDown />
                 {/* Profile */}
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
