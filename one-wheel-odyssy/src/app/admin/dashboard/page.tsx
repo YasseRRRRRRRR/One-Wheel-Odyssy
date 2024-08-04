@@ -97,7 +97,7 @@ const DashboardCard = ({ title, subtitle, body }: DashboardCardProps) => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>{title}</CardTitle>
+        <CardTitle className="text-red-500">{title}</CardTitle>
         <CardDescription>{subtitle}</CardDescription>
       </CardHeader>
       <CardContent>

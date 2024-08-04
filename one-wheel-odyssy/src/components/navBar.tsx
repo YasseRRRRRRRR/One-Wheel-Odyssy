@@ -47,8 +47,11 @@ const NavBar = async () => {
       <MaxWidthWrapper>
         <div className="flex h-14 items-center justify-between border-b border-zinc-200">
           <Link href="/" className="flex z-40 font-semibold">
-            <p>
+            <p className="hidden sm:block">
               One-<span className="text-red-600">Wheel</span>-Odyssy
+            </p>
+            <p className="block sm:hidden">
+              O-<span className="text-red-600">W</span>-O
             </p>
           </Link>
 
@@ -269,24 +272,7 @@ const NavBar = async () => {
                 </Link>
 
                 {/* Language */}
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button
-                      variant="secondary"
-                      size="icon"
-                      // className="hidden sm:flex "
-                    >
-                      FI
-                      {/* <ChevronDown className="ml-1.5 h-4 w-4" /> */}
-                      <span className="sr-only">Toggle Language menu</span>
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="center" className="z-[101]">
-                    <DropdownMenuItem>FI</DropdownMenuItem>
-                    <DropdownMenuItem>EN</DropdownMenuItem>
-                    <DropdownMenuItem>SV</DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
+                <TranslationDropDown />
 
                 <div className="h-8 w-px bg-zinc-200 hidden sm:block"></div>
                 <Link

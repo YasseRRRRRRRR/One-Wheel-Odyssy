@@ -2,11 +2,13 @@ import { Button } from "@/components/ui/button";
 import {
   Table,
   TableBody,
+  TableCell,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Plus } from "lucide-react";
+import db from "@/db/db";
+import { Ban, CircleCheck, Plus } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -27,7 +29,11 @@ const Page = () => {
   );
 };
 
-const ProductTable = () => {
+const ProductTable = async () => {
+  const unicycles = await db.unicycle.findMany({
+    select: { id: true, name: true, priceInCents: true, stock: true },
+    orderBy: { name: "asc" },
+  });
   return (
     <Table>
       <TableHeader>
@@ -43,7 +49,19 @@ const ProductTable = () => {
           </TableHead>
         </TableRow>
       </TableHeader>
-      <TableBody></TableBody>
+      <TableBody>
+        {unicycles.map((unicycle) => (
+          <TableRow key={unicycle.id}>
+            <TableCell>
+              {unicycle.stock === 0 ? (
+                <Ban className="size-6" />
+              ) : (
+                <CircleCheck className="size-6" />
+              )}
+            </TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
     </Table>
   );
 };
