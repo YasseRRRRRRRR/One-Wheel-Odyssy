@@ -2,18 +2,18 @@ A template made from scratch for potential ecommerce sites, this one specializes
 
 the tech Stack used is
 
-- Next js.
+- [Next.js](https://nextjs.org/)
   
 Front-End:
-- Shadcn/ui.
-- Tailwind.
+- [Shadcn.ui](https://ui.shadcn.com).
+- [Tailwind](https://tailwindcss.com).
 
   
 ![image](https://github.com/user-attachments/assets/61f0508a-4f18-47c5-94d3-83149caef3ac)
 ![image](https://github.com/user-attachments/assets/7d7c60d7-d23b-4f78-abff-0316eb78a487)
 
 Back-End (WIP):
-- Prizma
+- [Prizma](Prizma)
   
 ![image](https://github.com/user-attachments/assets/a5941583-be05-432a-90f3-c637a677dce0)
 ![image](https://github.com/user-attachments/assets/cdd24539-3896-4aa2-9a37-d5a92040f383)
